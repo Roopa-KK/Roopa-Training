@@ -5,11 +5,7 @@
     <classes>
       <class name="com.training.sanity.tests.LoginTests">
         <methods>
-          <include name="testCase2"/>
-          <include name="setUpBeforeClass"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testCase3"/>
+          <include name="testcase4"/>
         </methods>
       </class> <!-- com.training.sanity.tests.LoginTests -->
     </classes>

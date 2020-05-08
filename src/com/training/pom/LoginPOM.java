@@ -13,108 +13,97 @@ public class LoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-/*  Already there
- * 	@FindBy(id="login")
-	private WebElement userName; 
-	
-	@FindBy(id="password")
-	private WebElement password;
-	
-	@FindBy(id="formLogin_submitAuth")
-	private WebElement loginBtn; 
-	
-		
-/*	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
-	}
-	
-	public void sendPassword(String password) {
-		this.password.clear(); 
-		this.password.sendKeys(password); 
-	}
-	
-	public void clickLoginBtn() {
-		this.loginBtn.click(); 
-	}
-	*/
-	
-	
-	// Roopa writing for 1st Week  3 test cases below 
-	
-	// Test Case 1
+	// User Name field
 	@FindBy(id="login")
 	private WebElement userName;
 	
+	// Password Field
 	@FindBy(id="password")
 	private WebElement password;
 	
+	// Login Button
 	@FindBy(id="form-login_submitAuth")
 	private WebElement loginBtn;
 	
+	// xpath to capture Welcome message after loged in
 	@FindBy(xpath="//article[@id='homepage-course']")
 	private WebElement txtMsg;
 	
+	// xpath for UserIcon dropdown
 	@FindBy(className="dropdown-toggle")
 	private WebElement userIcon;
 	
+	// xpath for Inbox option in User Icon dropdown
 	@FindBy(xpath="//a[@title='Inbox']")
 	private WebElement InboxBtn;
 	
+	//xpath for My Ceritficate option in User Icon dropdown
 	@FindBy(xpath="//a[@title='My certificates']")
 	private WebElement MycertiBtn;
 	
+	// xpath for Administration Tab
 	@FindBy(xpath="//a[@title='Administration']")
 	private WebElement adminMenu;
 	
+	// Logout Button
 	@FindBy(id="logout_button")
 	private WebElement logoutBtn;
      
+	// xPath for HomePage tab
 	@FindBy(xpath="//a[@title='Homepage']")
 	private WebElement homePageTab;
 	
+	// path for Profile Edit
 	@FindBy(linkText="Edit profile")
 	private WebElement userProfile;
 	
+	// locator for  Old Pass
 	@FindBy(id="profile_password0")
 	private WebElement oldUserName;
 	
+	// Xpath for New Pass
 	@FindBy(xpath="//input[@id='password1']")
 	private WebElement newPass;
 	
+	// xpath for new Pass confirmation  
 	@FindBy(xpath="//input[@id='profile_password2']")
 	private WebElement confirmPass;
 	
+	// xpath for savechanges button
 	@FindBy(xpath="//button[@id='profile_apply_change']")
 	private WebElement savechanges;
 	
+	// xpath to capture test mesage after changes saved
 	@FindBy(xpath="//div[@class='alert alert-info']")
 	private WebElement successMessage;
 	
-	// Extra test case doing for practice 
-	//Test case - TO verify whether application allows admin to view details of user
 	
-	
-	
-	
+	 	
 	// METHODS
+	
+	// User Name field
 	public void sendUserName(String userName)
 	{
 		this.userName.clear();
 		this.userName.sendKeys(userName);
 	}
 	
+	
+	// Password Field
 	public void sendPassword(String password)
 	{
 		this.password.clear();
 		this.password.sendKeys(password);
 	}
 	
+	
+	// Login Button Click
 	public void clickLoginBtn()
 	{
 		this.loginBtn.click();
 	}
 	
+	// Hello welcome message displayed page .Capturing the message and printing in the console. 
 	public void verifyHomePage(String txtval)
 	{		
 		if(this.txtMsg.getText().contains(txtval))
@@ -124,11 +113,13 @@ public class LoginPOM {
 		
 	}
 	
+	// Clicking on User Icon on the top corner
 	public void clickUserIcon()
 	{
 		this.userIcon.click();
 	}
 	
+	// OPtions from the User Icon dropdown are printing in the console.
 	public void verifyUsermenu()
 	{		
 		if(this.InboxBtn.getText().contains("Inbox"))
@@ -146,6 +137,13 @@ public class LoginPOM {
 		
 	}
 	
+	// clicking Logout from the user icon dropdown 
+	public void clickLogoutBtn()
+	{
+		this.logoutBtn.click();
+	}
+	
+	// Administration menu
 	public void verifyAdminmenu()
 	{		
 		if(this.adminMenu.getText().contains("Administration"))
@@ -153,43 +151,45 @@ public class LoginPOM {
 		else
 			System.out.println("Administration menu didnot display");
 	}
-	public void clickLogoutBtn()
-	{
-		this.logoutBtn.click();
-	}
 	
+	//Homepage Tab
 	public void clickHomePage()
 	{
 		this.homePageTab.click();
 	}
 	
-			
+	 // Clicking User Profile
 	public void clickUserProfile()
 	{
 		this.userProfile.click();
 	}
 	
+	// Entering Old Password
 	public void enterOldUserNm(String oldUserName)
 	{
 		this.oldUserName.sendKeys(oldUserName);
 	}
 	
+	// entering new password 
 	public void enterNewPass(String newPass)
 	{
 		this.newPass.sendKeys(newPass);
 		
 	}
 	
+	//Confirming new password
 	public void enterConfirmPass(String confirmPass)
 	{
 		this.confirmPass.sendKeys(confirmPass);
 	}
 	
+	// clicking on savechanges button
 	public void saveChangesBtn()
 	{
 		this.savechanges.click();
 	}
 	
+	// Capturing message after saved changes successfully and priting in console
 	public void verifySuccessMessage()
 	{		
 		if(this.successMessage.getText().contains("Your new profile has been saved"))
@@ -198,11 +198,6 @@ public class LoginPOM {
 			System.out.println("Profile message didnot display");
 	}
 	
-	// Extra test case Method below 
-	
-	public void clickAdminTab()
-	{
-		this.adminMenu.click();
-	}
+   
 }
 

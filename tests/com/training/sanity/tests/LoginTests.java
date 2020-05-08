@@ -20,7 +20,7 @@ public class LoginTests {
 		private static WebDriver driver;
 	private static String baseUrl;
 	private static LoginPOM loginPOM;
-	private static Properties properties;
+	 	private static Properties properties;
 	private static ScreenShot screenShot;
 
 	
@@ -42,7 +42,7 @@ public class LoginTests {
 		
 	}
 	
-  @AfterMethod
+    @AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit(); 
@@ -59,15 +59,15 @@ public class LoginTests {
     loginPOM.clickLoginBtn(); 
     loginPOM.verifyHomePage("Hello Roops Pujari and welcome");
 	loginPOM.clickUserIcon();
-	//Thread.sleep(1000); not supposed to write getOptions use and see the lists displayed in the dropdown
-	loginPOM.verifyUsermenu();	loginPOM.clickLogoutBtn();
+	loginPOM.verifyUsermenu();	
+	loginPOM.clickLogoutBtn();
 	screenShot.captureScreenShot("First"); 
 
 	}	
 	
 	
     @Test(priority=2)
-//Test Case 2 : To verify whether application allows admin to get login into application
+     //Test Case 2 : To verify whether application allows admin to get login into application
 	
 	public void testCase2()
 	{
@@ -81,26 +81,22 @@ public class LoginTests {
 	@Test(priority=3)
 	// Test Case 3 : To verify whether application allows admin to change the password in Edit Profile page
 	
+	//SMALL NOTE : I have done the pre-Req steps also login into application. 
+	
 	public void testCase3()// throws InterruptedException
 	{
 		loginPOM.sendUserName("kkboys");
 		loginPOM.sendPassword("roopa@1234");
 		loginPOM.clickLoginBtn();
-        //Thread.sleep(1000);				
-		loginPOM.clickUserProfile();
+     	loginPOM.clickUserProfile();
 		loginPOM.enterOldUserNm("roopa@1234");
 		loginPOM.enterNewPass("roops@1234");
 		loginPOM.enterConfirmPass("roops@1234");
 		loginPOM.saveChangesBtn();
 		loginPOM.verifySuccessMessage();
-		loginPOM.clickHomePage(); // This is not in my test case I wanted to learn clicking Tab I did it.
 		
+		// This is not in my test case I wanted to learn clicking Tab I did it.
+		loginPOM.clickHomePage(); 
 	}
 	
-	@Test(priority=4)
-	// For Practice working on extra test case. 
-	public void testcase4()
-	{
-		loginPOM.clickAdminTab();
-	}
 }
