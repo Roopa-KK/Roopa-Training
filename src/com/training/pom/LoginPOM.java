@@ -40,7 +40,7 @@ public class LoginPOM {
 	*/
 	
 	
-	// Roopa writing 
+	// Roopa writing for 1st Week  3 test cases below 
 	
 	// Test Case 1
 	@FindBy(id="login")
@@ -91,7 +91,9 @@ public class LoginPOM {
 	@FindBy(xpath="//div[@class='alert alert-info']")
 	private WebElement successMessage;
 	
-	//what is this assert and why we need to use
+	// Extra test case doing for practice 
+	//Test case - TO verify whether application allows admin to view details of user
+	
 	
 	
 	
@@ -118,7 +120,7 @@ public class LoginPOM {
 		if(this.txtMsg.getText().contains(txtval))
 			System.out.println("Welcome message displayed");
 		else
-			System.out.println("Welcome message didnot display");
+			System.out.println("Welcome message did not display");
 		
 	}
 	
@@ -194,6 +196,13 @@ public class LoginPOM {
 			System.out.println("Profile message displayed");
 		else
 			System.out.println("Profile message didnot display");
+	}
+	
+	// Extra test case Method below 
+	
+	public void clickAdminTab()
+	{
+		this.adminMenu.click();
 	}
 }
 

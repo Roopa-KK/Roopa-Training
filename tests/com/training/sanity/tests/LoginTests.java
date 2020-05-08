@@ -93,8 +93,14 @@ public class LoginTests {
 		loginPOM.enterConfirmPass("roops@1234");
 		loginPOM.saveChangesBtn();
 		loginPOM.verifySuccessMessage();
-		loginPOM.clickHomePage();
+		loginPOM.clickHomePage(); // This is not in my test case I wanted to learn clicking Tab I did it.
 		
 	}
 	
+	@Test(priority=4)
+	// For Practice working on extra test case. 
+	public void testcase4()
+	{
+		loginPOM.clickAdminTab();
+	}
 }
