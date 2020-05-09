@@ -37,6 +37,7 @@ public class LoginTests {
 		driver.get(baseUrl);
 	}
 
+	
 	@BeforeMethod
 	public void setUp() throws Exception {
 		

@@ -5,6 +5,7 @@
     <classes>
       <class name="com.training.sanity.tests.LoginTests">
         <methods>
+          <include name="setUpBeforeClass"/>
           <include name="testcase4"/>
         </methods>
       </class> <!-- com.training.sanity.tests.LoginTests -->
