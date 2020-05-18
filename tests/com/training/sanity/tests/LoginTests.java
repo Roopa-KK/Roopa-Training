@@ -4,7 +4,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -12,17 +15,20 @@ import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
+import com.training.pom.SecondWeek;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
 public class LoginTests {
 
-		private static WebDriver driver;
+	private static WebDriver driver;
 	private static String baseUrl;
 	private static LoginPOM loginPOM;
-	 	private static Properties properties;
+	private static Properties properties;
 	private static ScreenShot screenShot;
+	public static SecondWeek secondweek;
 
+//	LoginPOM loginPOM = new LoginPOM
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -36,7 +42,7 @@ public class LoginTests {
 		// open the browser 
 		driver.get(baseUrl);
 	}
-
+/*
 	
 	@BeforeMethod
 	public void setUp() throws Exception {
@@ -98,6 +104,43 @@ public class LoginTests {
 		
 		// This is not in my test case I wanted to learn clicking Tab I did it.
 		loginPOM.clickHomePage(); 
-	}
+	} */
 	
+  // Second week 1st testcase
+/* @Test //(priority=4)
+	public void secondWeekTC1() throws InterruptedException 
+	{
+	   loginPOM.sendUserName("admin");
+	   loginPOM.sendPassword("admin@123");
+	   loginPOM.clickLoginBtn(); 
+	   loginPOM.clickSessionCatList();
+	   loginPOM.verifySessionCatListMsg();
+	   loginPOM.clickTrainingSessionList();
+	   loginPOM.verifySessionListMsg();
+	   loginPOM.clickSubIcon("Roopa-Working", "subscribe");
+	   loginPOM.verifySubscribeMsg();
+	   loginPOM.enterStudentName("sunil"); 
+	   Thread.sleep(6000);
+	   loginPOM.displayStudentmatchNames();
+	   loginPOM.getStudentNameAddedWindow();
+	   loginPOM.clickSubscribeUsersBtn();
+	
+	  } 
+	
+ @Test //(priority=5)
+	public void testcase2()
+	{
+		loginPOM.sendUserName("admin");
+		loginPOM.sendPassword("admin@123");
+		loginPOM.clickLoginBtn(); 
+	    loginPOM.clickCareersPromotionsLink();
+	    loginPOM.validateCareersPromotionPage();
+	    loginPOM.clickCareersIcon();
+	    loginPOM.displayedCareersPage();
+	    loginPOM.clickAddIcon();
+	    loginPOM.displayedCareersAddPage();
+	    
+	} */
+	 
+     
 }

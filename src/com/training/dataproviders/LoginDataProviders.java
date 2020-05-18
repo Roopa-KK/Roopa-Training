@@ -38,7 +38,7 @@ public class LoginDataProviders {
 	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){
-		// ensure you will have the title as first line in the file 
-		return new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
+		// ensure you will have the title as v       v   first line in the file,0 
+		return new ReadExcel().getExcelData("C:/Users/Nav;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;een/Desktop/Testing.xls", "Sheet1"); 
 	}
 }
