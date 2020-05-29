@@ -22,7 +22,6 @@ public class LoginPOM {
 	}
 	
 	
-	
 	// User Name field
 	@FindBy(id="login")
 	private WebElement userName;
@@ -87,8 +86,225 @@ public class LoginPOM {
 	@FindBy(xpath="//div[@class='alert alert-info']")
 	private WebElement successMessage;
 	
+	
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//Week 3 COmplex 
+	// Test Case 1- ELTC_076
+	//TO verify whether application allows multiple user to get registered as Teacher
+	
+	//Step1 : Click on Sign Up! link
+	@FindBy(xpath="//a[contains(text(),'Sign up!')]")
+	private WebElement signUpLink;
+	
+	//Expected : Registration page should get displayed
+	@FindBy(xpath="//li[@class='active']")
+	private WebElement registrationPage;
+	
+	
+	
+	//Step2 :Enter valid credential in First name textbox
+	@FindBy(xpath="//input[@id='registration_firstname']")
+	private WebElement regFirstName;
+	
+	//Expected : entered credential should be get displayed in First name textbox
+
+ 
+	//Step3 : Enter valid credential in Last name textbox
+	@FindBy(xpath="//input[@id='registration_lastname']")
+	private WebElement regLastName;
+	
+	
+	//Expected : entered credential should be get displayed in Last name textbox
+
+	
+
+	// Step 4 :Enter valid credential in e-mail textbox
+	@FindBy(xpath="//input[@id='registration_email']")
+	private WebElement regemail;
+	
+	//Expected : entered credential should be get displayed in e-mail textbox
+	  
+
+
+	//Step5 : Enter valid credential in username textbox
+	@FindBy(xpath="//input[@id='username']")
+	private WebElement regUserName;
+	
+	//Expected :entered credential should be get displayed in username textbox
+
+
+	//Step6 : Enter valid credential in pass textbox
+	@FindBy(xpath="//input[@id='pass1']")
+	private WebElement regPass1;
+	
+	//Expected : entered credential should be get displayed in pass textbox
+
+
+	//Step7 : Enter valid credential in confirm password textbox
+	@FindBy(xpath="//input[@id='pass2']")
+	private WebElement regPass2;
+	
+	//Expected : entered credential should be get displayed in confirm password textbox
+	 
+
+
+	//Step8 : Enter valid credential in phone textbox
+	@FindBy(xpath="//input[@id='registration_phone']")
+	private WebElement regPhoneTextBox;
+	
+	//Expected :entered credential should be get displayed in phone textbox
+
+	
+
+	//Step9 : Selected Valid credentials from Language list box
+	@FindBy(xpath="//div[@class='filter-option-inner']")
+	private WebElement regLanguageSelect;
+	
+	@FindBy(xpath="//div[@class='bs-searchbox']//input[@class='form-control']")
+	private WebElement regLanguageSelectSearch;
+	
+   //Expected : Selected language should get displayed in Language list box
+	
+
+	//Step 10 : Click Teacher radio button in Profile
+	@FindBy(xpath="//input[@class='register-profile'][@value='1']")
+	private WebElement regProfileRadioBtn;
+	
+	//Teacher radio button in Profile should get selected
+
+
+	//Step11 : Click on Register button
+	@FindBy(xpath="//button[@id='registration_submit']")
+	private WebElement registerBtn;
+	
+	
+	/*Expected : "Dear ,  Your personal settings have been registered.
+                An email has been sent to help you remember your login and password.
+                Message should get displayed" */
+	
+	@FindBy(xpath="//li[@class='active']")
+	private WebElement regConfirmationPage;
+	
+	// TestCase2 - Capturing Error message 
+	@FindBy(xpath="//div[@class='alert alert-warning']")
+	private WebElement errorMsg;
+
+	
+	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	//TC2-ELTC_077
+
+    //TO verify whether application displays error message upon entering invalid details while getting registered as Teacher
+
+   // Same steps need to follow just have to change the excel sheet
+	
+	//*******************************************************************
+	
+	// TC03 -ELTC_078
+	//To verify whether registered Teacher details stored in database
+
+
+
+	
 	// METHODS
 	
+	// Sign Up Link
+	
+	public void clickSignUpLink()
+	{
+		this.signUpLink.click();
+	}
+	
+	public void verifyRegistrationPage()
+	{
+		if(this.registrationPage.getText().contains("Registration"))
+				System.out.println("Registration Page Displayed");
+		else
+			System.out.println("Registration Page not Displayed");
+	}
+	
+	public void enterregFirstName(String regFirstName)
+	{
+		this.regFirstName.sendKeys(regFirstName);
+	}
+	
+	public void enterregLastName(String regLastName)
+	{
+		this.regLastName.sendKeys(regLastName);
+	}
+	
+	public void enterregemail(String regemail)
+	{
+		this.regemail.sendKeys(regemail);
+	}
+	
+	public void enterregUserName(String regUserName)
+	{
+		this.regUserName.sendKeys(regUserName);
+	}
+	
+	public void enterregPass1(String regPass1)
+	{
+		this.regPass1.sendKeys(regPass1);
+	}
+	
+	public void enterregPass2(String regPass2)
+	{
+		this.regPass2.sendKeys(regPass2);
+	}
+	
+	public void enterregPhoneTextBox(String regPhoneTextBox)
+	{
+		this.regPhoneTextBox.sendKeys(regPhoneTextBox);
+	}
+	
+	public void clickregLanguageSelect()
+    {
+    	this.regLanguageSelect.click();
+    }
+ 
+    public void clickregLanguageSelectSearch()
+    {
+    	this.regLanguageSelectSearch.click();
+    	//this.coachNameInTrainSession.sendKeys(fourCharEnter);
+    }
+  
+    public void enterRegLanguage(String language) throws Exception
+    {
+    	this.regLanguageSelectSearch.click();
+    	Thread.sleep(4000);
+    	this.regLanguageSelectSearch.sendKeys(language);
+    	Thread.sleep(4000);
+    	this.regLanguageSelectSearch.sendKeys(Keys.ENTER);
+    }
+
+
+    public void clickregProfileRadioBtn()
+    {
+    	this.regProfileRadioBtn.click();
+    }
+	
+	public void clickregisterBtn()
+	{
+		this.registerBtn.click();
+	}
+	
+	public void verifyRegConfirmationPage()
+	{
+		if(this.regConfirmationPage.getText().contains("Registration"))
+			System.out.println("Registration confirmation page displayed");
+		else
+			System.out.println("Registration confirmation page not displayed");
+		
+	}
+	
+	public void verifyErrorMsg()
+	{
+		if(this.errorMsg.getText().contains("This login is already in use"))
+		System.out.println("Error message displayed");
+		else
+			System.out.println("Error message not displayed");
+	}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++	
 	// User Name field
 	public void sendUserName(String userName)
 	{
@@ -107,10 +323,10 @@ public class LoginPOM {
 	
 	
 	// Login Button Click
-//	public void clickLoginBtn()
-//	{
-//		this.loginBtn.click();
-//	}
+	public void clickLoginBtn()
+	{
+		this.loginBtn.click();
+	}
 	
 	// Hello welcome message displayed page .Capturing the message and printing in the console. 
 	public void verifyHomePage(String txtval)
@@ -1304,6 +1520,12 @@ public class LoginPOM {
                       
                      //From 12th to 26th I have used the created previously Methods 
            
+                      
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //  3rd WEEK Assignment 
+                      
+                      
+                   
     }
 
           

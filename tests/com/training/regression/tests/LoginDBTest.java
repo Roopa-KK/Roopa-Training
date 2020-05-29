@@ -55,16 +55,49 @@ public class LoginDBTest {
 
 
 	@Test(dataProvider = "db-inputs", dataProviderClass = LoginDataProviders.class)
-	public void loginDBTest(String userName, String password) {
+	//public void loginDBTest(String userName, String password)
+	
+	public void loginDBTest(String regFirstName, String regLastName, String regemail, String regUserName, String regPass1, String regPass2, String regPhoneTextBox, String language) throws Exception
+	{
 		// for demonstration 
 //		genericMethods.getElement("login", "id"); 
-				
+		/*System.out.println("Username/n" +userName);
+		System.out.println("password/n" +password);
 		loginPOM.sendUserName(userName);
 		
-		loginPOM.sendPassword(password);
-		loginPOM.clickLoginBtn();
 		
-		screenShot.captureScreenShot(userName);
+		loginPOM.sendPassword(password);
+		loginPOM.clickLoginBtn(); */
+		
+		//genericMethods.getElement("TestCase3", "id"); 
+		
+		/*System.out.println("FirstName/n" +regFirstName);
+		System.out.println("LastName/n" +regLastName);
+		System.out.println("email/n" +regemail);
+		System.out.println("UserName" +regUserName);
+		System.out.println("Password" +regPass1);
+		System.out.println("ConfirmPassword" +regPass2);
+		System.out.println("PhoneNumber" +regPhoneTextBox);
+		System.out.println("Language" +language); */
+		
+				
+		loginPOM.clickSignUpLink();
+		loginPOM.verifyRegistrationPage();
+		loginPOM.enterregFirstName(regFirstName);
+		loginPOM.enterregLastName(regLastName);
+		loginPOM.enterregemail(regemail);
+		loginPOM.enterregUserName(regUserName);
+		loginPOM.enterregPass1(regPass1);
+		loginPOM.enterregPass2(regPass2);
+		loginPOM.enterregPhoneTextBox(regPhoneTextBox);
+		loginPOM.clickregLanguageSelect();
+		loginPOM.clickregLanguageSelectSearch();
+		loginPOM.enterRegLanguage(language);
+		loginPOM.clickregProfileRadioBtn();
+		loginPOM.clickregisterBtn();
+		loginPOM.verifyErrorMsg();
+
+		//screenShot.captureScreenShot(userName);
 
 	}
 

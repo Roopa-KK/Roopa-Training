@@ -1,92 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-18T04:20:40Z" name="Default suite" finished-at="2020-05-18T04:21:05Z" duration-ms="25109">
+  <suite started-at="2020-05-29T02:39:53Z" name="Default suite" finished-at="2020-05-29T02:41:30Z" duration-ms="97133">
     <groups>
     </groups>
-    <test started-at="2020-05-18T04:20:40Z" name="Default test" finished-at="2020-05-18T04:21:05Z" duration-ms="25109">
-      <class name="com.training.sanity.tests.SecondWeekTests">
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.SecondWeekTests@17c386de]" started-at="2020-05-18T00:20:40Z" name="setUpBeforeClass" finished-at="2020-05-18T00:20:55Z" duration-ms="14254" status="PASS">
+    <test started-at="2020-05-29T02:39:53Z" name="Default test" finished-at="2020-05-29T02:41:30Z" duration-ms="97133">
+      <class name="com.training.regression.tests.LoginExcelTest">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:39:53Z" name="setUpBeforeClass" finished-at="2020-05-28T22:39:53Z" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.sanity.tests.SecondWeekTests@17c386de]" started-at="2020-05-18T00:20:55Z" name="setUp" finished-at="2020-05-18T00:20:55Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:39:54Z" name="setUp" finished-at="2020-05-28T22:40:05Z" duration-ms="10636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testcase4()[pri:3, instance:com.training.sanity.tests.SecondWeekTests@17c386de]" started-at="2020-05-18T00:20:55Z" name="testcase4" finished-at="2020-05-18T00:21:05Z" duration-ms="10801" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=81.0.4044.138)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-7D9LM88', ip: '192.168.0.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\ROOPAD~1\AppData\Local\Temp\scoped_dir10992_1645118451}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56602}, acceptInsecureCerts=false, browserVersion=81.0.4044.138, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true}]
-Session ID: 1a3d21f0f5cd81c00ecf79457b7b2036]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=81.0.4044.138)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-7D9LM88', ip: '192.168.0.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\ROOPAD~1\AppData\Local\Temp\scoped_dir10992_1645118451}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56602}, acceptInsecureCerts=false, browserVersion=81.0.4044.138, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true}]
-Session ID: 1a3d21f0f5cd81c00ecf79457b7b2036
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
-	at com.training.pom.LoginPOM.fillFormDetailsToAddUser(LoginPOM.java:1100)
-	at com.training.sanity.tests.SecondWeekTests.testcase4(SecondWeekTests.java:170)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="loginExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:05Z" name="loginExcelTest" data-provider="excel-inputs" finished-at="2020-05-28T22:40:19Z" duration-ms="14426" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mehadi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[manzoor@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[English]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase4 -->
-      </class> <!-- com.training.sanity.tests.SecondWeekTests -->
+        </test-method> <!-- loginExcelTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:19Z" name="tearDown" finished-at="2020-05-28T22:40:20Z" duration-ms="872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:20Z" name="setUp" finished-at="2020-05-28T22:40:28Z" duration-ms="8137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:28Z" name="loginExcelTest" data-provider="excel-inputs" finished-at="2020-05-28T22:40:42Z" duration-ms="13886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[alex]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hales]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[alex@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[alex]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[alex]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[alex]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[9876543211]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[English]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginExcelTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:42Z" name="tearDown" finished-at="2020-05-28T22:40:43Z" duration-ms="879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:43Z" name="setUp" finished-at="2020-05-28T22:40:52Z" duration-ms="8325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:40:52Z" name="loginExcelTest" data-provider="excel-inputs" finished-at="2020-05-28T22:41:06Z" duration-ms="14235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[george]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bush]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[george@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[george]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[george]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[george]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[9876543212]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[English]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginExcelTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:41:06Z" name="tearDown" finished-at="2020-05-28T22:41:07Z" duration-ms="956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:41:07Z" name="setUp" finished-at="2020-05-28T22:41:15Z" duration-ms="8005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginExcelTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:41:15Z" name="loginExcelTest" data-provider="excel-inputs" finished-at="2020-05-28T22:41:29Z" duration-ms="14132" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mark]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[angel]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mark@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[mark]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[mark]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[mark]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[9876543213]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[English]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginExcelTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@780cb77]" started-at="2020-05-28T22:41:29Z" name="tearDown" finished-at="2020-05-28T22:41:30Z" duration-ms="891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.regression.tests.LoginExcelTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

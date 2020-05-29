@@ -44,17 +44,76 @@ public class LoginExcelTest {
 	}
 
 	@AfterMethod
-	public void tearDown() throws Exception {
-		driver.quit();
-	}
+	public void tearDown() throws Exception
+	{
+ 	driver.quit();
+  	}
 
+	//"xls-inputs"
+	//"excel-inputs"
+	
 	@Test(dataProvider = "excel-inputs", dataProviderClass = LoginDataProviders.class)
-	public void loginDBTest(String userName, String password) {
+	public void loginExcelTest(String regFirstName, String regLastName, String regemail, String regUserName, String regPass1, String regPass2, String regPhoneTextBox, String language) throws Exception
+	{
+		/*System.out.println("FirstName/n" +fName);
+		System.out.println("LastName/n" +lName);
+		System.out.println("Email/n" +email);
+		System.out.println("Username/n" +userName);
+		System.out.println("password/n" +password);
+		System.out.println("Confirm Password/n" +confpassword);
+		System.out.println("Phone/n" +phone);
+		System.out.println("Language/n" +language);
+						
 		loginPOM.sendUserName(userName);
 		loginPOM.sendPassword(password);
 		loginPOM.clickLoginBtn();
-		screenShot.captureScreenShot(userName);
-
+		screenShot.captureScreenShot(userName); */
+		
+		// Roopa's Week 3rd Starts
+		// Test case1 --Valid data 
+		
+		loginPOM.clickSignUpLink();
+		loginPOM.verifyRegistrationPage();
+		loginPOM.enterregFirstName(regFirstName);
+		loginPOM.enterregLastName(regLastName);
+		loginPOM.enterregemail(regemail);
+		loginPOM.enterregUserName(regUserName);
+		loginPOM.enterregPass1(regPass1);
+		loginPOM.enterregPass2(regPass2);
+		loginPOM.enterregPhoneTextBox(regPhoneTextBox);
+		loginPOM.clickregLanguageSelect();
+		loginPOM.clickregLanguageSelectSearch();
+		loginPOM.enterRegLanguage(language);
+		loginPOM.clickregProfileRadioBtn();
+		loginPOM.clickregisterBtn();
+		Thread.sleep(1000);
+		loginPOM.verifyRegConfirmationPage();
+	
 	}
-
+	
+	//@Test(dataProvider = "excel-inputs1", dataProviderClass = LoginDataProviders.class)
+	public void loginExcelInvalidTest(String regFirstName, String regLastName, String regemail, String regUserName, String regPass1, String regPass2, String regPhoneTextBox, String language) throws Exception
+	{	
+		
+		loginPOM.clickSignUpLink();
+		loginPOM.verifyRegistrationPage();
+		loginPOM.enterregFirstName(regFirstName);
+		loginPOM.enterregLastName(regLastName);
+		loginPOM.enterregemail(regemail);
+		loginPOM.enterregUserName(regUserName);
+		loginPOM.enterregPass1(regPass1);
+		loginPOM.enterregPass2(regPass2);
+		loginPOM.enterregPhoneTextBox(regPhoneTextBox);
+		loginPOM.clickregLanguageSelect();
+		loginPOM.clickregLanguageSelectSearch();
+		loginPOM.enterRegLanguage(language);
+		loginPOM.clickregProfileRadioBtn();
+		loginPOM.clickregisterBtn();	
+		Thread.sleep(1000);
+		loginPOM.verifyErrorMsg();
+		
+		
+		
+	}
+	
 }

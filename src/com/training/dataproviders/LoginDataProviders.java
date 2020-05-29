@@ -19,26 +19,41 @@ public class LoginDataProviders {
 		Object[][] result = new Object[list.size()][]; 
 		int count = 0; 
 		for(LoginBean temp : list){
-			Object[]  obj = new Object[2]; 
-			obj[0] = temp.getUserName(); 
-			obj[1] = temp.getPassword(); 
+			Object[]  obj = new Object[8]; 
+			obj[0] = temp.getFirstName(); 
+			obj[1] = temp.getLastName();
+			obj[2] = temp.getEmail(); 
+			obj[3] = temp.getUserName();
+			obj[4] = temp.getPassword(); 
+			obj[5] = temp.getPassword2();
+			obj[6] = temp.getPhone(); 
+			obj[7] = temp.getlanguage();
 			
 			result[count ++] = obj; 
 		}
-		
-		
+				
 		return result;
 	}
 	
 	@DataProvider(name = "excel-inputs")
-	public Object[][] getExcelData(){
-		String fileName ="C:/Users/Naveen/Desktop/Testing.xlsx"; 
-		return new ApachePOIExcelRead().getExcelContent(fileName); 
+	public Object[][] getExcelData()
+	{
+	String fileName ="C:/Roopa/Data.xlsx"; 
+	return new ApachePOIExcelRead().getExcelContent(fileName); 
+	}
+	
+	@DataProvider(name = "excel-inputs1")
+	public Object[][] getExcelData1()
+	{
+	String fileName ="C:/Roopa/Data1.xlsx"; 
+	return new ApachePOIExcelRead().getExcelContent(fileName); 
 	}
 	
 	@DataProvider(name = "xls-inputs")
-	public Object[][] getXLSData(){
-		// ensure you will have the title as v       v   first line in the file,0 
-		return new ReadExcel().getExcelData("C:/Users/Nav;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;een/Desktop/Testing.xls", "Sheet1"); 
+	public Object[][] getXLSData()
+	{
+			return new ReadExcel().getExcelData("C:/Roopa/test.xlsx", "Sheet1"); 
 	}
+	
+	
 }
